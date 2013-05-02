@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewVillage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/edittext_modified_states"
+        android:ems="10"
+        android:paddingBottom="5dp"
+        android:paddingLeft="140dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/autoCompleteTextViewVillage"
+        android:layout_alignLeft="@+id/autoCompleteTextViewVillage"
+        android:layout_alignTop="@+id/autoCompleteTextViewVillage"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/label_village"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewPhase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoCompleteTextViewVillage"
+        android:layout_alignRight="@+id/autoCompleteTextViewVillage"
+        android:layout_below="@+id/autoCompleteTextViewVillage"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/edittext_modified_states"
+        android:ems="10"
+        android:paddingBottom="5dp"
+        android:paddingLeft="140dp"
+        android:paddingTop="5dp" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/buttonHousehold"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_home" />
+
+            <Button
+                android:id="@+id/buttonAddCoordinates"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_add_coordinates" />
+
+            <Button
+                android:id="@+id/buttonSettings"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_settings" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/TextViewLastModified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/autoCompleteTextViewPhase"
+        android:layout_alignRight="@+id/textViewLocation"
+        android:layout_alignTop="@+id/autoCompleteTextViewPhase"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/label_phase"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/autoCompleteTextViewPhase"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="463dp"
+        android:background="@drawable/round_corners"
+        android:text="@string/label_button_confirm" />
+
+</RelativeLayout>

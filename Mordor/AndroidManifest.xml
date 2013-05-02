@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="edu.ucsf.telemedicine.mhealth.mordor" android:versionCode="1"
+	android:versionName="1.0">
+
+	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="17" />
+	
+	<permission android:name="edu.ucsf.telemedicine.mhealth.mordor.permission.MAPS_RECEIVE" 
+	    android:protectionLevel="signature"/>
+	
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="edu.ucsf.telemedicine.mhealth.mordor.permission.MAPS_RECEIVE"/>
+	
+	<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+
+	<application android:allowBackup="true" android:label="@string/app_name" android:theme="@style/ModorTheme" android:icon="@drawable/icon">
+		
+		<activity android:name="edu.ucsf.telemedicine.mhealth.mordor.Login"
+		    android:screenOrientation="portrait"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".Start" android:label="@string/title_start" android:screenOrientation="portrait"></activity>
+		<activity android:name=".LocationDetails" android:label="@string/title_location_details" android:screenOrientation="portrait"></activity>
+		<activity android:name=".UserSettings" android:label="@string/title_user_settings" android:screenOrientation="portrait"></activity>
+		<activity android:name=".SyncSettings" android:label="@string/label_sync_settings" android:screenOrientation="portrait"></activity>
+		<activity android:name=".HeadOfHousehold" android:label="@string/title_village_home" android:screenOrientation="portrait"></activity>
+		<activity android:name=".HeadOfHouseholdDetails" android:label="@string/title_head_of_household_details" android:screenOrientation="portrait"></activity>
+		<activity android:name=".Guardian" android:label="@string/title_guardian" android:screenOrientation="portrait"></activity>
+		<activity android:name=".GuardianDetails" android:label="@string/title_guardian_details" android:screenOrientation="portrait"></activity>
+		<activity android:name=".Child" android:label="@string/title_child" android:screenOrientation="portrait"></activity>
+		<activity android:name=".ChildSummary" android:label="@string/title_child_summary" android:screenOrientation="portrait"></activity>
+		<activity android:name=".ChildDetails" android:label="@string/title_child_details" android:screenOrientation="portrait"></activity>
+		<activity android:name=".Treatment" android:label="@string/title_treatment" android:screenOrientation="portrait"></activity>
+		<activity android:name=".HouseholdReview" android:label="@string/title_household_review" android:screenOrientation="portrait"></activity>
+												
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDB83uxU83EQvm2jN2fkTS2nHtx6vX0MMM"/>
+	</application>
+
+</manifest>

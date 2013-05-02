@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        >
+        <TableRow>
+
+        <Button
+            android:id="@+id/buttonHousehold"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_square_corners"
+            android:gravity="center"
+            android:text="@string/label_button_home" />
+
+            <Button
+            android:id="@+id/buttonAddCoordinates"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_square_corners"
+            android:gravity="center"
+            android:text="@string/label_button_add_coordinates" />
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_square_corners"
+            android:gravity="center"
+            android:text="@string/label_button_settings" />
+    
+		</TableRow>
+	</TableLayout>
+    
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="20sp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewHeadOfHousehold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLocation"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round_corners"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Large Text XXX"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+		android:clickable="true"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textViewGuardian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHeadOfHousehold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_corners"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Large Text YYY"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+		android:clickable="true"
+        android:textSize="30sp" />
+    
+    
+    <Button
+        android:id="@+id/buttonAddChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewGuardian"
+        android:layout_alignRight="@+id/textViewGuardian"
+        android:layout_below="@+id/textViewGuardian"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:text="@string/label_button_add_child"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/buttonAddChild"
+        android:layout_alignTop="@+id/buttonAddChild"
+        android:layout_alignBottom="@+id/buttonAddChild"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/ic_menu_add" />
+
+    <ListView
+        android:id="@+id/listViewChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonAddChild"
+        android:layout_alignRight="@+id/buttonAddChild"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/white" >
+
+    </ListView>
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+<!--     
+    <style name="MordorWindowTitleText" parent="android:TextAppearance.WindowTitle">
+          <item name="android:textSize">100sp</item>
+          <item name="android:textColor">#5599FF</item>
+          <item name="android:textStyle">bold|italic</item>
+     </style>
+     Changes the background color of the title bar
+     <style name="MordorWindowTitleBackground">
+           <item name="android:background">#222200</item>
+     </style>
+    
+     <style name="MordorWindowTitle" parent="android:TextAppearance.WindowTitle">
+          <item name="android:textAppearance">@style/MordorWindowTitleText</item>
+          <item name="android:shadowDx">0</item>
+          <item name="android:shadowDy">0</item>
+          <item name="android:shadowRadius">5</item>
+          <item name="android:shadowColor">#1155CC</item>
+      </style>
+ -->   
+  
+    <style name="ModorTheme" parent="android:Theme.Holo.Light">
+        
+    </style>
+     
+    
+
+</resources>

@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/buttonHousehold"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_home" />
+
+            <Button
+                android:id="@+id/buttonSettings"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_settings" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:padding="20sp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:layout_alignRight="@+id/textViewLocation"
+        android:layout_below="@+id/textViewLocation"
+        android:layout_marginTop="0dp"
+        android:gravity="top"
+        android:lines="5"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+ 
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_below="@+id/TextViewLastModified"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewSummary"
+        android:layout_below="@+id/textViewSummary"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_corners"
+        android:text="@string/label_button_edit" />
+
+    <TextView
+        android:id="@+id/TextViewLastModified"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/buttonEdit"
+        android:layout_alignRight="@+id/textViewSummary"
+        android:layout_below="@id/buttonEdit"
+        android:layout_marginTop="0dp"
+        android:gravity="top"
+        android:lines="2"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

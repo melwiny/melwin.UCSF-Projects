@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <TableRow>
+            
+            <Button
+                android:id="@+id/buttonHousehold"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:gravity="center"
+                android:text="@string/label_button_home" />
+            
+
+            <Button
+                android:id="@+id/buttonGps"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:gravity="center"
+                android:text="@string/label_button_gps" />
+
+            <Button
+                android:id="@+id/buttonLock"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:gravity="center"
+                android:text="@string/label_button_lock" />
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/listViewHouseholdReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white" >
+    </ListView>
+
+</RelativeLayout>

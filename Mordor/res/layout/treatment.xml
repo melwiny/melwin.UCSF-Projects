@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="20sp"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@null"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/buttonHousehold"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_home" />
+
+            <Button
+                android:id="@+id/buttonAddCoordinates"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_add_coordinates" />
+
+            <Button
+                android:id="@+id/buttonSettings"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/highlight_square_corners"
+                android:text="@string/label_button_settings" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@id/textViewHeadOfHousehold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewLocation"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round_corners"
+        android:gravity="center"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+		android:clickable="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textViewGuardian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textViewHeadOfHousehold"
+        android:layout_alignRight="@id/textViewHeadOfHousehold"
+        android:layout_below="@id/textViewHeadOfHousehold"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_corners"
+        android:gravity="center"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:onClick="onClick"
+		android:clickable="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textViewChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewGuardian"
+        android:layout_below="@+id/textViewGuardian"
+        android:text="Large Text"
+        android:padding="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="35dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxHasObtainedConsent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewChild"
+        android:layout_below="@+id/textViewChild"
+        android:layout_marginLeft="10dp"
+        android:text="@string/label_checkbox_obtained_consent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25dp" />
+   
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxHasObtainedConsent"
+        android:layout_alignRight="@+id/textViewGuardian"
+        android:layout_below="@+id/checkBoxHasObtainedConsent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_modified_states"
+        android:ems="10"
+        android:paddingBottom="5dp"
+        android:paddingLeft="140dp"
+        android:paddingTop="5dp" />
+    
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/autoCompleteTextViewStatus"
+        android:layout_alignLeft="@+id/autoCompleteTextViewStatus"
+        android:layout_alignTop="@+id/autoCompleteTextViewStatus"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/label_status"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+
+    <EditText
+        android:id="@+id/editTextDose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoCompleteTextViewStatus"
+        android:layout_alignRight="@+id/autoCompleteTextViewStatus"
+        android:layout_below="@+id/autoCompleteTextViewStatus"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_modified_states"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingBottom="5dp"
+        android:paddingLeft="140dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:id="@+id/textViewDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextDose"
+        android:layout_alignLeft="@+id/editTextDose"
+        android:layout_alignTop="@+id/editTextDose"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/label_dose"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="91dp"
+        android:background="@drawable/round_corners"
+        android:text="@string/label_button_save" />
+   
+    <EditText
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextDose"
+        android:layout_alignRight="@+id/editTextDose"
+        android:layout_below="@+id/editTextDose"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_modified_states"
+        android:ems="10"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:isScrollContainer="false" 
+        android:paddingLeft="140dp"
+        android:paddingTop="20dp"
+        android:scrollbars="vertical" />
+          
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextNote"
+        android:layout_alignLeft="@+id/editTextNote"
+        android:layout_alignTop="@+id/editTextNote"
+        android:gravity="left|top"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/label_note"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    
+    
+</RelativeLayout>

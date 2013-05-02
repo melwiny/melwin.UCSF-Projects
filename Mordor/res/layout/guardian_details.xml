@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="20sp"
+        android:text="@null"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+   <EditText
+        android:id="@+id/editTextFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/edittext_modified_states"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        android:paddingBottom="5dp"
+        android:paddingLeft="140dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:id="@+id/textViewSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextFirstName"
+        android:layout_alignLeft="@+id/editTextFirstName"
+        android:layout_alignTop="@+id/editTextFirstName"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/label_first_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+ 
+   <EditText
+       android:id="@+id/editTextLastName"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/editTextFirstName"
+       android:layout_alignRight="@+id/editTextFirstName"
+       android:layout_below="@+id/editTextFirstName"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/edittext_modified_states"
+       android:ems="10"
+       android:imeOptions="actionDone"
+       android:inputType="textPersonName"
+       android:paddingBottom="5dp"
+       android:paddingLeft="140dp"
+       android:paddingTop="5dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextLastName"
+        android:layout_alignLeft="@+id/editTextLastName"
+        android:layout_alignTop="@+id/editTextLastName"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/label_last_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+   <EditText
+       android:id="@+id/editTextAge"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/editTextLastName"
+       android:layout_alignRight="@+id/editTextLastName"
+       android:layout_below="@+id/editTextLastName"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/edittext_modified_states"
+       android:ems="10"
+       android:imeOptions="actionDone"
+       android:inputType="text|number"
+       android:paddingBottom="5dp"
+       android:paddingLeft="140dp"
+       android:paddingTop="5dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextAge"
+        android:layout_alignLeft="@+id/editTextAge"
+        android:layout_alignTop="@+id/editTextAge"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/label_age"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   <Switch
+       android:id="@+id/switch_male_female"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/editTextAge"
+       android:layout_below="@+id/editTextAge"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/edittext_modified_states"
+       android:paddingLeft="10dp"
+       android:paddingRight="10dp"
+       android:paddingTop="5dp"
+       android:paddingBottom="5dp"
+       android:text="@string/label_switch_gender"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       android:switchTextAppearance="?android:attr/textAppearanceLarge"
+       android:textOff="@string/label_female"
+       android:textOn="@string/label_male" />
+    
+   <Switch
+       android:id="@+id/switch_pregnant_yes_no"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/switch_male_female"
+       android:layout_below="@+id/switch_male_female"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/edittext_modified_states"
+       android:paddingLeft="10dp"
+       android:paddingRight="10dp"
+       android:paddingTop="5dp"
+       android:paddingBottom="5dp"
+       android:text="@string/label_switch_pregnant"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       android:switchTextAppearance="?android:attr/textAppearanceLarge"
+       android:textOff="@string/label_no"
+       android:textOn="@string/label_yes" />
+   
+   
+    <EditText
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/switch_pregnant_yes_no"
+        android:layout_alignRight="@+id/editTextAge"
+        android:layout_below="@+id/switch_pregnant_yes_no"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:background="@drawable/edittext_modified_states"
+        android:ems="10"
+        android:paddingLeft="140dp"
+        android:paddingTop="10dp"
+        android:lines="3"
+        android:scrollbars="vertical"
+        android:isScrollContainer="false" 
+        android:inputType="textMultiLine" />
+
+    
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextNote"
+        android:layout_alignLeft="@+id/editTextNote"
+        android:layout_alignTop="@+id/editTextNote"
+        android:gravity="left|top"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/label_note"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    
+ 	<TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        >
+        <TableRow>
+        <Button
+            android:id="@+id/buttonHousehold"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_square_corners"
+            android:text="@string/label_button_home" />
+
+        <Button
+            android:id="@+id/buttonAddCoordinates"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_square_corners"
+            android:text="@string/label_button_add_coordinates" />
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_square_corners"
+            android:text="@string/label_button_settings" />
+    
+		</TableRow>
+	</TableLayout>
+
+ 	<EditText
+ 	    android:id="@+id/EditTextPregnantMonthCount"
+ 	    android:layout_width="300dp"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignBaseline="@+id/switch_pregnant_yes_no"
+ 	    android:layout_alignBottom="@+id/switch_pregnant_yes_no"	    
+ 	    android:layout_alignRight="@+id/editTextAge"
+ 	    android:background="@drawable/edittext_modified_states"
+ 	    android:ems="10"
+ 	    android:imeOptions="actionDone"
+ 	    android:inputType="number"
+ 	    android:paddingBottom="5dp"
+ 	    android:paddingLeft="250dp"
+ 	    android:paddingTop="5dp" />
+
+ 	<TextView
+ 	    android:id="@+id/TextViewPregnantMonthCount"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_above="@+id/editTextNote"
+ 	    android:layout_alignLeft="@+id/EditTextPregnantMonthCount"
+ 	    android:layout_alignTop="@+id/EditTextPregnantMonthCount"
+ 	    android:gravity="left|center_vertical"
+ 	    android:paddingLeft="10dp"
+ 	    android:text="@string/label_pregnant_months"
+ 	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ 	<CheckBox
+ 	    android:id="@+id/checkBoxHasHeadOfHousehold"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/editTextNote"
+ 	    android:layout_alignRight="@+id/editTextNote"
+ 	    android:layout_below="@+id/editTextNote"
+ 	    android:layout_marginTop="30dp"
+ 	    android:background="@color/white"
+ 	    android:clickable="false"
+ 	    android:text="@string/title_head_of_household"
+ 	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ 	<Button
+ 	    android:id="@+id/buttonSave"
+ 	    android:layout_width="200dp"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_below="@+id/checkBoxHasHeadOfHousehold"
+ 	    android:layout_centerHorizontal="true"
+ 	    android:layout_marginTop="5dp"
+ 	    android:background="@drawable/round_corners"
+ 	    android:text="@string/label_button_add_child" />
+    
+</RelativeLayout>

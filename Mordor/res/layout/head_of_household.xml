@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        >
+        <TableRow>
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_square_corners"
+            android:gravity="center"
+            android:text="@string/label_button_settings" />
+    
+		</TableRow>
+	</TableLayout>
+    
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="20sp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonAddHeadOfHousehold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewLocation"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:text="@string/label_button_add_household"
+        android:textSize="30sp" />
+
+    <ListView
+        android:id="@+id/listViewHeadOfHousehold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonAddHeadOfHousehold"
+        android:layout_alignRight="@+id/buttonAddHeadOfHousehold"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/white" >
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/buttonAddHeadOfHousehold"
+        android:layout_alignLeft="@+id/buttonAddHeadOfHousehold"
+        android:layout_alignTop="@+id/buttonAddHeadOfHousehold"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/ic_menu_add" />
+
+</RelativeLayout>

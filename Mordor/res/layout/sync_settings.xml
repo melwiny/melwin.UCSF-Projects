@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/checkBoxSyncActivated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="33dp"
+        android:text="@string/label_checkbox_sync_activated"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonSyncInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxSyncActivated"
+        android:layout_marginTop="41dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:text="@null" />
+    
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/buttonSyncInterval"
+            android:layout_alignLeft="@+id/buttonSyncInterval"
+            android:layout_alignTop="@+id/buttonSyncInterval"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/label_button_sync_interval"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textViewSyncInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/buttonSyncInterval"
+            android:layout_alignRight="@+id/buttonSyncInterval"
+            android:layout_alignTop="@+id/buttonSyncInterval"
+            android:gravity="center_vertical"
+            android:paddingRight="80dp"
+            android:text="@string/label_button_sync_interval"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonSyncRetryInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxSyncActivated"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:text="@null" />
+    
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/buttonSyncRetryInterval"
+            android:layout_alignLeft="@+id/buttonSyncRetryInterval"
+            android:layout_alignTop="@+id/buttonSyncRetryInterval"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/label_button_sync_retry_interval"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textViewSyncRetryInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/buttonSyncRetryInterval"
+            android:layout_alignRight="@+id/buttonSyncRetryInterval"
+            android:layout_alignTop="@+id/buttonSyncRetryInterval"
+            android:gravity="center_vertical"
+            android:paddingRight="80dp"
+            android:text="@string/label_button_sync_retry_interval"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textViewLastSyncMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/textViewLocation"
+            android:layout_below="@+id/buttonSyncRetryInterval"
+            android:layout_marginTop="25dp"
+            android:text="@null"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/buttonSyncNow"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewLastSyncMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="139dp"
+            android:background="@drawable/edittext_modified_states"
+            android:text="@string/label_button_sync_now" />
+ 
+ 	<TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        >
+        <TableRow>
+        <Button
+            android:id="@+id/buttonHousehold"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_square_corners"
+            android:text="@string/label_button_home" />
+
+        <Button
+            android:id="@+id/buttonAddCoordinates"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_square_corners"
+            android:text="@string/label_button_add_coordinates" />
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_square_corners"
+            android:text="@string/label_button_settings" />
+    
+		</TableRow>
+	</TableLayout>
+ 
+ </RelativeLayout>
